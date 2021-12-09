@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
+import { Receta } from 'src/app/Interfaces/receta';
 
 @Component({
   selector: 'app-espanola',
@@ -10,10 +11,12 @@ import { ApiService } from 'src/app/api.service';
 export class EspanolaComponent implements OnInit {
 
   public session: Boolean;
+  public recetas:Array<Receta>
   constructor(private router: Router,private api:ApiService) { }
 
   ngOnInit(): void {
     this.sessionisactive()
+    this.peticionRecetas()
   }
 
   cerrarSesion(){
@@ -41,6 +44,16 @@ export class EspanolaComponent implements OnInit {
       console.log("no existe")
       this.session = false
     }
+  }
+
+  peticionRecetas(){
+    const request = {pais: "españolas"}
+
+    this.api.recetas(request).subscribe(data => {
+      this.recetas = data
+    }, error =>{
+      console.log(error)
+    });
   }
 
 }

@@ -49,11 +49,12 @@ export class MexicanaComponent implements OnInit {
   }
 
   peticionRecetas(){
-    const request = {pais: "chinas"}
+    const request = {pais: "mexicanas"}
+
     this.api.recetas(request).subscribe(data => {
       console.log("Realizado peticion recetas")
-      this.recetas = data.recetas
-      console.log(data)
+      this.recetas = data
+      console.log(this.recetas)
     }, error =>{
       console.log("Error peticion recetas")
       console.log(error)
