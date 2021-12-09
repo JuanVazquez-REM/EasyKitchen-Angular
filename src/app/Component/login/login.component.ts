@@ -37,12 +37,12 @@ export class LoginComponent implements OnInit {
     console.log("Datos que enviamos:")
     console.log(this.request)
     this.api.login(this.request).subscribe(data => {
-  /*     alert("Bienvenido "+ data.user.nombre)
+      alert("Bienvenido "+ data.user.nombre)
       
-      localStorage.setItem("TOKEN", data.token)
+      localStorage.setItem("TOKEN", data.token.token)
       localStorage.setItem("USER_NAME", data.user.nombre)
       localStorage.setItem("USER_EMAIL", data.user.email)
-      var token = localStorage.getItem("TOKEN") */
+      var token = localStorage.getItem("TOKEN") 
       console.log(data)
       
       this.router.navigateByUrl('/inicio')
