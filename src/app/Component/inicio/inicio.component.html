@@ -1,0 +1,113 @@
+
+<div class="fondo">
+    <div class="container"><br>
+        <div class="row">
+            <div class="col text-start">
+                <h2 class="text-white"><b>Easy Kitchen</b></h2>
+            </div>
+
+            <div class="col text-end sm-9" *ngIf="session">
+                <h5><b class="text-white">Hola, {{nombre}}</b></h5>
+                
+            </div>
+
+            <div class="col text-end sm-9" *ngIf="!session">
+                <button type="button" class="btn text-white" routerLink="/iniciarsesion"><b>Iniciar sesion</b> </button>
+                <button type="button" class="btn bg-white" routerLink="/registro"><b>Registrarme</b></button>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div class="row text-center">
+            <div class="col">
+                <img src="../../../assets/imagenes/logo.png" alt="" width="200px"> 
+            </div>
+        </div><br>
+
+        <div class="row text-center">
+            <div class="col">
+                <h3 class="text-white" style="font-family: merienda;">El mejor ingrediente para la receta es <br> la imaginacion</h3>
+                <hr style="background-color: #f3f400; height: 5px; width: 40%; margin: auto;"> <br><br>
+                <h6 class="corbel text-white"><b>Encuentra las mejores recetas <br> internacionales aqui!</b></h6>
+            </div>
+        </div>
+    </div>
+    <div class="vacio">
+        <div class="container">
+            
+        </div>
+        
+    </div> 
+
+    <div class="text-center"><img src="../../../assets/imagenes/triangulo.png" alt="" width="150px" height="55px"></div>
+    <div class="contenedor">
+
+        <br><br><br><br>
+
+        <div class="container" style="font-family: merienda;">
+
+            <div class="row">
+                <div class="col">
+                    <div class="card text-white" routerLink="/recetas/mexicanas">
+                        <img src="../../../assets/Categorias/comida_mexicana.jpg" class="card-img" alt="..." style="max-height: 350px;">
+                        <div class=" text-center card-img-overlay">
+                            <h1>Comida Mexicana</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card text-white" routerLink="/recetas/chinas">
+                        <img src="../../../assets/Categorias/comida_china.jpg" class="card-img" alt="..." style="max-height: 350px;">
+                        <div class=" text-center card-img-overlay">
+                            <h1>Comida China</h1>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+
+            <div class="row">
+                <div class="col">
+                    <div class="card text-white " routerLink="/recetas/italianas">
+                        <img src="../../../assets/Categorias/comida_italiana.jpg" class="card-img" alt="..." style="max-height: 350px;">
+                        <div class=" text-center card-img-overlay">
+                            <h1>Comida Italiana</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card text-white " routerLink="/recetas/españolas">
+                        <img src="../../../assets/Categorias/comida_española.jpg" class="card-img" alt="..." style="max-height: 350px;">
+                        <div class=" text-center card-img-overlay">
+                            <h1>Comida Española</h1>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+
+            <div class="row">
+                <div class="col">
+                    <div class="card text-white " routerLink="/recetas/colombianas">
+                        <img src="../../../assets/Categorias/comida_colombiana.jpg" class="card-img" alt="..." style="max-height: 350px;">
+                        <div class=" text-center card-img-overlay">
+                            <h1>Comida Colombia</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card text-white " routerLink="/recetas/japonesas">
+                        <img src="../../../assets/Categorias/comida_japonesa.jpg" class="card-img" alt="..." style="max-height: 350px;">
+                        <div class=" text-center card-img-overlay">
+                            <h1>Comida Japonesa</h1>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+
+        </div>
+    </div>
+</div>
+

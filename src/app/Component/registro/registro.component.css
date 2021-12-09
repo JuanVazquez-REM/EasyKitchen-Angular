@@ -1,0 +1,9 @@
+.background {
+    background-image: url("../../../assets/imagenes/fondo-registro.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.link{
+	text-decoration: none;
+}

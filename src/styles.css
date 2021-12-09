@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+/* Tipografias */
+@font-face {
+    font-family: corbel;
+    src: url("/src/assets/font-family/Corbel.ttf");
+}
+
+@font-face {
+    font-family: corbel-bold;
+    src: url("/src/assets/font-family/CorbelBold.ttf");
+}
+
+@font-face {
+    font-family: merienda;
+    src: url("/src/assets/font-family/Merienda-Regular.ttf");
+}
+
+@font-face {
+    font-family: clarkson;
+    src: url("/src/assets/font-family/ClarksonScript-Regular.ttf");
+}
+
+.text-white{
+    color: white;
+}
+
+.text-black{
+    color: #000;
+}
+
+.text-yellow{
+    color: #F3F400;
+}
+
+.bg-yellow{
+    background-color: #F3F400;
+}
+
+.bg-white{
+    background-color: #fff;
+}
+
+
+.bg-black{
+	background-color: #000;
+}
+
+
+button{
+    border-radius: 10px; 
+    background-color: aqua;
+}
+
+h1{
+    font-family: merienda;
+}
+
+a{
+    text-decoration: none;
+    font-family: corbel;
+}
+
+p{
+    font-family: corbel;
+}
+
+label{
+	font-family: corbel;
+}
+
+.link{
+	text-decoration: none;
+}
+
+
+.text-footer{
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+}
+
+

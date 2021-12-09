@@ -1,0 +1,134 @@
+<!-- Navbar -->
+<nav  class="navbar navbar-expand-lg bg-black">
+        <div class="container-fluid">
+        <ul class="nav">
+            <li class="nav-item">
+            <i class="bi bi-list" type="button" id="sidebarCollapse" style="font-size: 2.5rem; color: #F3F400;" ></i>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link"><img src="../../../assets/imagenes/liso.png" alt=""  width="165px" routerLink="/inicio" style="margin-top: 5px;"></a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+    
+    
+    <div class="wrapper">
+    
+        <nav id="sidebar">
+        <ul class="lisst-unstyled components">
+    
+            <!-- Inicio -->
+            <li>
+            <a class="text-white" routerLink="/inicio">
+                <span><i class="bi bi-house-door-fill" style="color: #fff;"></i></span><b>&nbsp; Inicio</b></a>
+            </li>
+    
+            <!-- Categorias -->
+            <li>
+            <a href="#categorias" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle text-white" style="text-decoration: none;">
+                <span><i class="bi bi-list" style="font-size: 1.5rem; color: #fff;" ></i></span><b>&nbsp; Categorias</b></a>
+            <ul class="collapse list-unstyled" id="categorias">
+                <li>
+                    <a routerLink="/recetas/mexicanas">Mexicana</a>
+                </li>
+                <li>
+                    <a routerLink="/recetas/colombianas">Colombiana</a>
+                </li>
+                <li>
+                    <a routerLink="/recetas/españolas">Española</a>
+                </li>
+                <li>
+                    <a routerLink="/recetas/italianas">Italiana</a>
+                </li>
+                <li>
+                    <a routerLink="/recetas/japonesas">Japonesa</a>
+                </li>
+                <li>
+                    <a routerLink="/recetas/chinas">China</a>
+                </li>
+            </ul>
+            </li>
+    
+            <!-- Perfil -->
+            <li *ngIf="session">
+                    <a href="#perfil" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle text-white"style="text-decoration: none;">
+                    <span><i class="bi bi-person-fill" style=" color: #fff;" ></i></span><b>&nbsp; Perfil</b></a>
+                    <ul class="collapse list-unstyled" id="perfil">
+                    <li>
+                        <a routerLink="/perfil">Mi perfil</a>
+                    </li>
+                    <li>
+                        <a (click)="cerrarSesion()">Cerrar sesion</a>
+                    </li>
+                    </ul>
+            </li>
+            
+
+            <!-- Iniciar sesion -->
+            <li *ngIf="!session">
+                <a class="text-white" routerLink="/iniciarsesion">
+                    <span><i class="bi bi-person-check-fill" style="color: #fff;"></i></span><b>&nbsp; Iniciar sesion</b>
+                </a>
+            </li>
+
+            <!-- Registro -->
+            <li *ngIf="!session">
+                <a class="text-white" routerLink="/registro">
+                    <span><i class="bi bi-person-plus-fill" style="color: #fff;"></i></span><b>&nbsp; Registrarme</b>
+                </a>
+            </li>
+
+            
+            
+            <!-- Redes sociales -->
+            <li class="text-center" style="margin-top:120%;">
+            <b>Redes sociales</b><br>
+            <i class="bi bi-facebook"></i>&nbsp;
+            <i class="bi bi-twitter"></i>&nbsp;
+            <i class="bi bi-pinterest"></i>&nbsp;
+            <i class="bi bi-instagram"></i>&nbsp;
+            </li>
+    
+    
+        </ul>
+        </nav>
+    
+        <!-- Contenido -->
+        <div id="content" [ngClass]="{'background':session,'bg':!session}">
+        <br>
+        <div class="container ">
+            <div class="row text-center" *ngIf="!session">
+                <div class="">
+                    <h3>Inicia sesion para ver este apartado</h3>
+                </div>
+            </div>
+            <div class="row text-white" *ngIf="session">
+                <div class="offset-lg-1">
+                    <h3>Bienvenido <b>{{nombre}}</b>, esta es tu seccion</h3><br>
+                </div>
+                <div class="offset-lg-1 col-lg-5 border" style="border-radius: 20px; height: 500px; background-color: #fff; color: black;"><br>
+                    <h3 class="text-center">Actualizar datos</h3><br>
+                    <form [formGroup]="formActualizar" (submit)="actualizar()">
+                        <div class="mb-2">
+                            <label class="form-label">Nombre</label>
+                            <input type="nombre" name="nombre" id="nombre" class="form-control" placeholder="{{nombre}}"  formControlName="nombre">
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label">Correo</label>
+                            <input type="email" name="email" id="email" placeholder="{{email}}"  formControlName="email" class="form-control" >
+                        </div><br>
+
+                        <button type="submit" class="btn btn-block bg-yellow">Actualizar</button>
+                    </form>
+                </div>
+                <div class="col-lg-5 text-center text-white"><br>
+                    <div class="row">
+                        <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eius saepe doloremque earum quod ea totam! Necessitatibus autem maiores fuga. <br> Corrupti explicabo alias natus consectetur odio illum porro eius repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore esse libero deserunt sed aliquam temporibus, omnis sunt vitae placeat reiciendis provident corrupti accusantium praesentium est dolor similique. Ullam, nihil ipsum.</b></p>
+                    </div>
+                    <img src="../../../assets/imagenes/logo.png" alt="Easy Kitchen" width="150px">
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>

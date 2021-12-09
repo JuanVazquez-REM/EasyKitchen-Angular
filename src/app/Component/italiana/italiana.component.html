@@ -1,0 +1,346 @@
+<!-- Navbar -->
+<nav  class="navbar navbar-expand-lg color">
+    <div class="container-fluid">
+      <ul class="nav">
+        <li class="nav-item">
+          <i class="bi bi-list" type="button" id="sidebarCollapse" style="font-size: 2.5rem; color: #F3F400;" ></i>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><img src="../../../assets/imagenes/liso.png" alt=""  width="165px" routerLink="/inicio" style="margin-top: 5px;"></a>
+        </li>
+      </ul>
+      <div class="text-end">
+        <img src="../../../assets/imagenes/bandera-italiana.png" alt=""  width="75px" >
+      </div>
+    </div>
+  </nav>
+  
+  
+  <div class="wrapper">
+  
+    <nav id="sidebar">
+      <ul class="lisst-unstyled components">
+  
+          <!-- Inicio -->
+          <li>
+          <a class="text-white" routerLink="/inicio">
+              <span><i class="bi bi-house-door-fill" style="color: #fff;"></i></span><b>&nbsp; Inicio</b></a>
+          </li>
+  
+          <!-- Categorias -->
+          <li>
+          <a href="#categorias" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle text-white" style="text-decoration: none;">
+              <span><i class="bi bi-list" style="font-size: 1.5rem; color: #fff;" ></i></span><b>&nbsp; Categorias</b></a>
+          <ul class="collapse list-unstyled" id="categorias">
+              <li>
+                  <a routerLink="/recetas/mexicanas">Mexicana</a>
+              </li>
+              <li>
+                  <a routerLink="/recetas/colombianas">Colombiana</a>
+              </li>
+              <li>
+                  <a routerLink="/recetas/españolas">Española</a>
+              </li>
+              <li>
+                  <a routerLink="/recetas/italianas">Italiana</a>
+              </li>
+              <li>
+                  <a routerLink="/recetas/japonesas">Japonesa</a>
+              </li>
+              <li>
+                  <a routerLink="/recetas/chinas">China</a>
+              </li>
+          </ul>
+          </li>
+  
+          <!-- Perfil -->
+          <li *ngIf="session">
+                  <a href="#perfil" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle text-white"style="text-decoration: none;">
+                  <span><i class="bi bi-person-fill" style=" color: #fff;" ></i></span><b>&nbsp; Perfil</b></a>
+                  <ul class="collapse list-unstyled" id="perfil">
+                  <li>
+                      <a routerLink="/perfil">Mi perfil</a>
+                  </li>
+                  <li>
+                      <a (click)="cerrarSesion()">Cerrar sesion</a>
+                  </li>
+                  </ul>
+          </li>
+          
+  
+          <!-- Iniciar sesion -->
+          <li *ngIf="!session">
+              <a class="text-white" routerLink="/iniciarsesion">
+                  <span><i class="bi bi-person-check-fill" style="color: #fff;"></i></span><b>&nbsp; Iniciar sesion</b>
+              </a>
+          </li>
+  
+          <!-- Registro -->
+          <li *ngIf="!session">
+              <a class="text-white" routerLink="/registro">
+                  <span><i class="bi bi-person-plus-fill" style="color: #fff;"></i></span><b>&nbsp; Registrarme</b>
+              </a>
+          </li>
+  
+          
+          
+          <!-- Redes sociales -->
+          <li class="text-center" style="margin-top:120%;">
+          <b>Redes sociales</b><br>
+          <i class="bi bi-facebook"></i>&nbsp;
+          <i class="bi bi-twitter"></i>&nbsp;
+          <i class="bi bi-pinterest"></i>&nbsp;
+          <i class="bi bi-instagram"></i>&nbsp;
+          </li>
+  
+  
+      </ul>
+      </nav>
+  
+    <!-- Contenido -->
+    <div id="content" >
+      
+        <div class="container text-center" >
+          <br>
+          <h1 class="text-center letra">Comida Italiana</h1>
+          <br>
+          <div class="offset-lg-1 m-0 row justify-content-center">
+            <div class="col-auto ">
+              <div class="card" style="width: 15rem;">
+                <img src="../../../assets/imagenes/Comida Mexicana/chiles2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <div class="titulos">
+                  <h5 class="card-title">Chiles en Nogada</h5>
+                </div>
+                  <div class="mybtn"> 
+                  <a routerLink="/chiles" class="btn btn-success">Ver receta</a>
+                </div>  
+              </div>
+            </div><br>
+            </div>
+        
+            <div class="col-auto">
+              <div class="card" style="width: 15rem;">
+                <img src="../../../assets/imagenes/Comida Mexicana/arroz con leche.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <div class="titulos">
+                  <h5 class="card-title">Arroz con leche</h5>
+                </div>
+                  <div class="mybtn"> 
+                  <a routerLink="/chiles" class="btn btn-success ">Ver receta</a>
+                </div>  
+              </div>
+            </div><br>
+            </div>
+        
+            <div class="col-auto">
+              <div class="card" style="width: 15rem;">
+                <img src="../../../assets/imagenes/Comida Mexicana/asado verde.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <div class="titulos">
+                  <h5 class="card-title">Asado verde</h5>
+                </div>
+                  <div class="mybtn"> 
+                  <a routerLink="/chiles" class="btn btn-success">Ver receta</a>
+                </div>  
+              </div>
+            </div><br>
+            </div>
+        
+            <div class="col-auto">
+              <div class="card" style="width: 15rem;">
+                <img src="../../../assets/imagenes/Comida Mexicana/enchiladas potosinas.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <div class="titulos">
+                  <h5 class="card-title">Enchiladas potosinas</h5>
+                </div>
+                  <div class="mybtn"> 
+                  <a routerLink="/chiles" class="btn btn-success ">Ver receta</a>
+                </div>  
+              </div>
+            </div><br>
+            </div>
+        
+            
+          
+    
+          
+            <div class="col-auto">
+              <div class="card" style="width: 15rem;">
+                <img src="../../../assets/imagenes/Comida Mexicana/aa.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <div class="titulos">
+                  <h5 class="card-title">Cochinita Pibil</h5>
+                </div>
+                  <div class="mybtn"> 
+                  <a routerLink="/chiles" class="btn btn-success ">Ver receta</a>
+                </div>  
+              </div>
+            </div><br>
+            </div>
+        
+            <div class="col-auto">
+              <div class="card" style="width: 15rem;">
+                <img src="../../../assets/imagenes/Comida Mexicana/buñuelos.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <div class="titulos">
+                  <h5 class="card-title">Buñuelos</h5>
+                </div>
+                  <div class="mybtn"> 
+                  <a routerLink="/chiles" class="btn btn-success ">Ver receta</a>
+                </div>  
+              </div>
+            </div><br>
+            </div>
+        
+            <div class="col-auto">
+              <div class="card" style="width: 15rem;">
+                <img src="../../../assets/imagenes/Comida Mexicana/churros.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <div class="titulos">
+                  <h5 class="card-title">Churroz de azúcar</h5>
+                </div>
+                  <div class="mybtn"> 
+                  <a routerLink="/chiles" class="btn btn-success ">Ver receta</a>
+                </div>  
+              </div>
+            </div><br>
+            </div>
+        
+            <div class="col-auto">
+              <div class="card" style="width: 15rem;">
+                <img src="../../../assets/imagenes/Comida Mexicana/enchiladas.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <div class="titulos">
+                  <h5 class="card-title">Enchiladas Rojas</h5>
+                </div>
+                  <div class="mybtn"> 
+                  <a routerLink="/chiles" class="btn btn-success ">Ver receta</a>
+                </div>  
+              </div>
+            </div><br>
+            </div>
+          
+    
+          
+            <div class="col-auto">
+              <div class="card" style="width: 15rem;">
+                <img src="../../../assets/imagenes/Comida Mexicana/gorditas nata.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <div class="titulos">
+                  <h5 class="card-title">Gorditas de nata</h5>
+                </div>
+                  <div class="mybtn"> 
+                  <a routerLink="/chiles" class="btn btn-success ">Ver receta</a>
+                </div>  
+              </div>
+            </div><br>
+            </div>
+        
+            <div class="col-auto">
+              <div class="card" style="width: 15rem;">
+                <img src="../../../assets/imagenes/Comida Mexicana/gorditas.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <div class="titulos">
+                  <h5 class="card-title">Gorditas tradicionales</h5>
+                </div>
+                  <div class="mybtn"> 
+                  <a routerLink="/chiles" class="btn btn-success ">Ver receta</a>
+                </div>  
+              </div>
+            </div><br>
+            </div>
+        
+            <div class="col-auto">
+              <div class="card" style="width: 15rem;">
+                <img src="../../../assets/imagenes/Comida Mexicana/mole.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <div class="titulos">
+                  <h5 class="card-title">Mole poblano</h5>
+                </div>
+                  <div class="mybtn"> 
+                  <a routerLink="/chiles" class="btn btn-success ">Ver receta</a>
+                </div>  
+              </div>
+            </div><br>
+            </div>
+        
+            <div class="col-auto">
+              <div class="card" style="width: 15rem;">
+                <img src="../../../assets/imagenes/Comida Mexicana/pozole.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <div class="titulos">
+                  <h5 class="card-title">Pozole</h5>
+                </div>
+                  <div class="mybtn"> 
+                  <a routerLink="/chiles" class="btn btn-success ">Ver receta</a>
+                </div>  
+              </div>
+            </div><br>
+            </div>
+          
+    
+          
+            <div class="col-auto">
+              <div class="card" style="width: 15rem;">
+                <img src="../../../assets/imagenes/Comida Mexicana/chiles2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <div class="titulos">
+                  <h5 class="card-title">Chiles en Nogada</h5>
+                </div>
+                  <div class="mybtn"> 
+                  <a routerLink="/chiles" class="btn btn-success ">Ver receta</a>
+                </div>  
+              </div>
+            </div><br>
+            </div>
+        
+            <div class="col-auto">
+              <div class="card" style="width: 15rem;">
+                <img src="../../../assets/imagenes/Comida Mexicana/arroz con leche.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <div class="titulos">
+                  <h5 class="card-title">Chiles en Nogada</h5>
+                </div>
+                  <div class="mybtn"> 
+                  <a routerLink="/chiles" class="btn btn-success ">Ver receta</a>
+                </div>  
+              </div>
+            </div><br>
+            </div>
+        
+            <div class="col-auto">
+              <div class="card" style="width: 15rem;">
+                <img src="../../../assets/imagenes/Comida Mexicana/asado verde.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <div class="titulos">
+                  <h5 class="card-title">Chiles en Nogada</h5>
+                </div>
+                  <div class="mybtn"> 
+                  <a routerLink="/chiles" class="btn btn-success ">Ver receta</a>
+                </div>  
+              </div>
+            </div><br>
+            </div>
+        
+            <div class="col-auto">
+              <div class="card" style="width: 15rem;">
+                <img src="../../../assets/imagenes/Comida Mexicana/enchiladas potosinas.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <div class="titulos">
+                  <h5 class="card-title">Chiles en Nogada</h5>
+                </div>
+                  <div class="mybtn"> 
+                  <a routerLink="/chiles" class="btn btn-success ">Ver receta</a>
+                </div>  
+              </div>
+            </div><br>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  
+  
+  
+  

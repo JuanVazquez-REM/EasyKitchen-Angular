@@ -1,0 +1,151 @@
+    <!-- Navbar -->
+    <nav  class="navbar navbar-expand-lg color">
+        <div class="container-fluid">
+        <ul class="nav">
+            <li class="nav-item">
+            <i class="bi bi-list" type="button" id="sidebarCollapse" style="font-size: 2.5rem; color: #F3F400;" ></i>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link"><img src="../../../assets/imagenes/liso.png" alt=""  width="165px" routerLink="/inicio" style="margin-top: 5px;"></a>
+            </li>
+        </ul>
+        <div class="text-end">
+            <img src="../../../assets/imagenes/bandera-mexico.png" alt=""  width="75px" >
+        </div>
+        </div>
+    </nav>
+    
+    
+    <div class="wrapper">
+    
+        <nav id="sidebar">
+        <ul class="lisst-unstyled components">
+    
+            <!-- Inicio -->
+            <li>
+            <a class="text-white">
+                <span><i class="bi bi-house-door-fill" style="color: #fff;"></i></span><b>&nbsp; Inicio</b></a>
+            </li>
+    
+            <!-- Categorias -->
+            <li>
+            <a href="#categorias" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle text-white" style="text-decoration: none;">
+                <span><i class="bi bi-list" style="font-size: 1.5rem; color: #fff;" ></i></span><b>&nbsp; Categorias</b></a>
+            <ul class="collapse list-unstyled" id="categorias">
+                <li>
+                <a routerLink="/recetas/mexicanas">Mexicana</a>
+                </li>
+                <li>
+                <a routerLink="/recetas/colombianas">Colombiana</a>
+                </li>
+                <li>
+                <a routerLink="/recetas/españolas">Española</a>
+                </li>
+                <li>
+                <a routerLink="/recetas/italianas">Italiana</a>
+                </li>
+                <li>
+                <a routerLink="/recetas/japonesas">Japonesa</a>
+                </li>
+                <li>
+                <a routerLink="/recetas/chinas">China</a>
+                </li>
+            </ul>
+            </li>
+    
+            <!-- Perfil -->
+            <li>
+                    <a href="#perfil" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle text-white"style="text-decoration: none;">
+                    <span><i class="bi bi-person-fill" style=" color: #fff;" ></i></span><b>&nbsp; Perfil</b></a>
+                    <ul class="collapse list-unstyled" id="perfil">
+                    <li>
+                        <a routerLink="/perfil">Mi perfil</a>
+                    </li>
+                    <li>
+                        <a (click)="cerrarSesion()">Cerrar sesion</a>
+                    </li>
+                    </ul>
+            </li>
+            
+            <!-- Redes sociales -->
+            <li class="text-center" style="margin-top:120%;">
+            <b>Redes sociales</b><br>
+            <i class="bi bi-facebook"></i>&nbsp;
+            <i class="bi bi-twitter"></i>&nbsp;
+            <i class="bi bi-pinterest"></i>&nbsp;
+            <i class="bi bi-instagram"></i>&nbsp;
+            </li>
+    
+    
+        </ul>
+        </nav>
+
+    <!-- Contenido -->
+    <div id="content" class="background">
+        <br>
+        <div class="container">
+            <h2 class="text-center titulo" style="font-family: merienda;" ><b>Chiles Rellenos</b></h2><br>
+
+            <div class="row d-lg-block d-none">
+                    <div class="offset-lg-7 col">
+                        <h3 style="font-family: merienda;" class="ingredientes subtitulos"><b>Ingredientes</b></h3>
+                    </div>
+            </div>
+
+            <div class="row"> 
+                    <div class="col">
+                        <div class="card" style="width: 26rem;" >
+                            <img src="../../../../assets/imagenes/Comida Mexicana/chiles2.jpg" class="card-img-top" height="340px;" alt="...">
+                        </div>
+                    </div><br>
+
+                <div class="d-lg-none d-block">
+                        <div class="offset-lg-7 col">
+                            <h3 style="font-family: merienda;" class="ingredientes subtitulos"><b>Ingredientes</b></h3>
+                        </div>
+                </div>
+    
+                    <div class="col texto">
+                        1 cucharada de KNORR® Caldo de costilla 
+                        3 cucharadas de aceite vegetal
+                        1/4 de cebolla finamente picada
+                        1 diente de ajo
+                        200 gramos de carne molida de res
+                        200 gramos de carne molida de cerdo
+                        1 cucharada de piñones blancos o rosados
+                    </div>
+                    
+                    <div class="col texto">
+                        1/2 cucharadita de mezcla en partes iguales de pimienta negra, comino, canela, pimienta gorda y clavo en polvo
+                        300 gramos de nuez de Castilla
+                        1 cucharada de azúcar
+                        1 pizca de nuez moscada en polvo
+                        1/4 taza de crema reducida en grasa
+                        1 cucharada de perejil para decorar
+                    </div>
+            </div>
+
+            <br><br>
+
+            <div class="row">
+                    <div class="col">
+                        <h4 class="subtitulos" style="font-family: merienda;"><b>Método de preparación</b></h4>
+                        
+                        <p class="corbel">
+                        Para el relleno, calentar el aceite en una sartén grande, sofreír la cebolla y el ajo hasta que queden transparentes. 
+                        Agregar la carne y cocinar hasta que tome color.
+                        Agregar la manzana, pera, pasas, piñones y mezcla de condimentos.<br> Sazonar con el Knorr® Caldo de Costilla incorporando todos los ingredientes Cocinar 3 min.
+                        Mezclar Knorr® Tomate Deshidratado con el agua y combinarlo en la preparación anterior. Dejar que se integren todos los ingredientes y que se espese ligeramente.
+                        Aprox 3 minutos más.
+                        Para la Nogada, licuar la nuez, azúcar, nuez moscada y crema. <br>Si es necesario, agregar un poquito de leche descremada para obtener una consistencia más ligera.
+                        Rellenar los chiles repartiendo uniformemente la carne en las 6 piezas.<br>
+                        Servir el chile bañado parcialmente con la nogada, esparcir la granada encima y decorar con las hojas de perejil.
+                        Para conservar la nuez de castilla sin que se ponga obscura, remoja en leche hasta que la utilices.
+                        Para preparar la nogada en otra temporada que no hay nuez de Castilla, puedes usar almendras peladas y molidas que le darán un sabor delicioso.
+                        </p>  
+                    </div>
+            </div>
+        </div>
+
+    </div>
+</div>

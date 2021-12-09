@@ -1,0 +1,37 @@
+<div class="background ">
+   <br>
+   <div class="container">
+      <div class="row justify-content-center">
+         <div class="col-lg-8 justify-content-center" style="background-color:white; border-radius: 20px; ">
+            
+            <div class="offset-lg-2 col-lg-8 justify-content-center">
+               <img src="../../../assets/imagenes/logonegro.png" class="card-img-top" width="40px" alt="">
+      
+               <form [formGroup]="formRegistro" (submit)="register()">
+                  <div class="form-group">
+                     <label>Nombre</label>
+                     <input type="nombre" name="nombre" id="email" formControlName="nombre"  class="form-control" placeholder="Ingrese su nombre" required>
+                  </div>
+                  <div class="form-group">
+                     <label>Correo</label>
+                     <input type="email" name="email" id="email" formControlName="email"  class="form-control" placeholder="Ingrese su correo">
+                  </div>
+                  <div class="form-group">
+                     <label>Contraseña</label>
+                     <input type="password" name="password" id="password" formControlName="password"  class="form-control" placeholder="Ingrese su contraseña">
+                  </div>
+                  <div class="form-group">
+                     <button type="submit" class=" btn btn-block mybtn bg-yellow tx-tfm">Registrarme</button>
+                  </div>
+                  <div class="form-group text-center">
+                     <a class="text-black link" routerLink="/iniciarsesion">¿Ya tienes una cuenta?</a><br>
+                     <a class="text-black link" routerLink="/iniciarsesion"><b>Inicia sesion</b></a>
+                  </div>
+      
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+   <br>
+</div>

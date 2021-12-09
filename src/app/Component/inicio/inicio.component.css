@@ -1,0 +1,39 @@
+/* .fondo {
+    background-image: url(../../../assets/imagenes/fondo_principal.png);
+    background-size:  cover;
+    background-position: center center;
+    background-attachment:fixed;
+    min-height: 100%;
+    height: 1800px;
+
+
+} */
+
+.fondo {
+    background-image: url(../../../assets/imagenes/fondo-principal2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+.vacio{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor{
+    width: 100%;
+    height: 800px;
+    background-color: #fff;
+}
+
+.eslogan{
+    position: absolute;
+    font-family: merienda;
+    color: #fff;
+    
+}
