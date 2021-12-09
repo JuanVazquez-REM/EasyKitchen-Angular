@@ -45,3 +45,49 @@
     <app-root></app-root>
   </body>
 </html>
+<style>
+
+@media screen and (max-width: 700px){
+  .grid{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.gride{
+  padding-right: 8px;
+}
+}
+@media screen and (max-width: 1280px) and (min-width: 701px){
+  .grid{
+    display: grid;
+    grid-template-columns: auto auto ;
+}
+.gride{
+  padding-right: 80px;
+} 
+}
+  
+  
+  /* Por debajo de 400px */
+@media screen and (max-width: 400px){
+  .grid{
+    display: grid;
+    grid-template-columns: auto;
+}
+
+}
+
+
+@media screen and (min-width: 1281px) {
+  .grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.gride{
+  padding-right: 20px;
+}
+}
+
+
+
+  
+  </style>
