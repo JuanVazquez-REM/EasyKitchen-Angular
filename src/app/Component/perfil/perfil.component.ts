@@ -1,3 +1,4 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -28,7 +29,7 @@ export class PerfilComponent implements OnInit {
   actualizar() {
     this.setActualizar();
     this.api.actualizar(this.request).subscribe(data => {
-
+      alert("Se actualizo correctamente")
       console.log(data)
       this.router.navigateByUrl('/perfil')
     }, error =>{
@@ -87,8 +88,8 @@ export class PerfilComponent implements OnInit {
       console.log("existe")
       this.api.check().subscribe(data => {
         this.session = true
-        localStorage.setItem("USER_NAME",data.nombre)
-        localStorage.setItem("USER_EMAIL",data.email)
+        localStorage.setItem("USER_NAME",data.user.nombre)
+        localStorage.setItem("USER_EMAIL",data.user.email)
 
         this.nombre = localStorage.getItem("USER_NAME")
         this.email = localStorage.getItem("USER_EMAIL")

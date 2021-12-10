@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
     console.log(this.request)
     this.api.login(this.request).subscribe(data => {
       alert("Bienvenido "+ data.user.nombre)
-      
+      console.log(data.user)
       localStorage.setItem("TOKEN", data.token.token)
       localStorage.setItem("USER_NAME", data.user.nombre)
       localStorage.setItem("USER_EMAIL", data.user.email)
