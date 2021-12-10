@@ -105,7 +105,7 @@
         <h1 class="text-center letra">Comida Mexicana</h1>
         <br>
         <div class="justify-content-center grid"  >
-          <app-card-receta   [recetas]='receta' class="gride" *ngFor='let receta of recetas'></app-card-receta>
+          <app-card-receta  [i]='in' [recetas]='receta' class="gride" *ngFor='let receta of recetas; let in = index'></app-card-receta>
         </div>
       </div>
   </div>

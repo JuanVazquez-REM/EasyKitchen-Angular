@@ -33,12 +33,12 @@ const routes: Routes = [
   {path:'recetas/chinas', component:ChinaComponent},
   {path:'recetas/colombianas', component:ColombianaComponent},
   
-  {path:'receta/mexicana', component:InterRecetaMexicanaComponent},
-  {path:'receta/china', component:InterRecetaChinaComponent},
-  {path:'receta/colombiana', component:InterRecetaColombianaComponent},
-  {path:'receta/española', component:InterRecetaEspanolaComponent},
-  {path:'receta/japonesa', component:InterRecetaJaponesaComponent},
-  {path:'receta/italiana', component:InterRecetaItalianaComponent},
+  {path:'receta/Mexicanas', component:InterRecetaMexicanaComponent},
+  {path:'receta/Chinas', component:InterRecetaChinaComponent},
+  {path:'receta/Colombianas', component:InterRecetaColombianaComponent},
+  {path:'receta/Españolas', component:InterRecetaEspanolaComponent},
+  {path:'receta/Japonesas', component:InterRecetaJaponesaComponent},
+  {path:'receta/Italianas', component:InterRecetaItalianaComponent},
 
   {path:'**',component:ErrorComponent}
 
