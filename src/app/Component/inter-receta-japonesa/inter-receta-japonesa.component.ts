@@ -13,7 +13,6 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class InterRecetaJaponesaComponent implements OnInit {
 
-  public IDreceta: number
   public session: Boolean;
   public Receta: Receta
   constructor(private router:Router,private api:ApiService,private serviceReceta:RecetaService) { }
